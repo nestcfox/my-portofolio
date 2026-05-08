@@ -1,0 +1,14 @@
+{
+    "name": "portofolioweb3",
+    "version": "1.0.0",
+    "description": "Simple Web3 portfolio site with optional backtest access",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.3",
+        "express": "^4.18.2",
+        "express-session": "^1.17.4"
+    }
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestcfox | Web3 Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="loader">
+        <img src="fox.png" alt="Loading Nestcfox" class="loader-fox">
+        <p>Welcome to Nestcfox Page!</p>
+    </div>
+
+    <!-- NAVBAR -->
+    <header role="banner">
+        <nav aria-label="Main navigation">
+            <h2>Nestcfox</h2>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#backtest">Backtest</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="fox-wrapper">
+            <div class="fox-idle">
+                <img src="fox.png" alt="Nestcfox mascot" class="fox-img">
+            </div>
+        </div>
+
+        <h1>Nestcfox</h1>
+        <p>Web3 Community Builder & Explorer</p>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <p>
+            Hello I am Nest and I live in Indonesia (UTC +7). I'm learning about Crypto and Web3 since 2023 and I've
+            been working on Web3 space since early 2024, I have been contribute on so many project in Cosmos, Ethereum,
+            Aptos, etc.
+        </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="fade-in">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">Community Building</div>
+            <div class="skill">Web3 Technologies</div>
+            <div class="skill">Blockchain</div>
+            <div class="skill">Social Media</div>
+            <div class="skill">Content Creation</div>
+            <div class="skill">Ambassadorship</div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="fade-in">
+        <h2>Experience</h2>
+        <ul>
+            <li>Openledger — Ambassador</li>
+            <li>Cedra Network — Global Moderator</li>
+            <li>Kwak Labs — Social Media Specialist</li>
+        </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="fade-in">
+        <h2>Projects</h2>
+        <p>Coming soon...</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="fade-in">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- BACKTEST (RESTRICTED) -->
+    <section id="backtest" class="fade-in">
+        <h2>Backtest (Restricted Access)</h2>
+        <p>This feature is only available to authorized users. Click the button below to unlock.</p>
+        <button id="unlockBacktest" class="primary">Unlock Backtest</button>
+
+        <div id="backtestPanel" class="hidden">
+            <!-- Trades Input Table -->
+            <div class="backtest-container">
+                <div class="backtest-header">
+                    <h3>Manage Trades</h3>
+                    <button id="addTradeBtn" class="btn-add-trade" title="Add new trade">+ Add Trade</button>
+                </div>
+
+                <div class="trades-table-wrapper">
+                    <table id="tradesTable" class="trades-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Pair</th>
+                                <th>Type</th>
+                                <th>Entry Date</th>
+                                <th>Entry Price</th>
+                                <th>SL</th>
+                                <th>TP</th>
+                                <th>Exit Date</th>
+                                <th>Result</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tradesBody"></tbody>
+                    </table>
+                </div>
+
+                <!-- Buttons -->
+                <div class="backtest-actions">
+                    <button id="runBacktestBtn" class="primary">Run Backtest</button>
+                    <button id="downloadBtn" class="secondary">Download Data</button>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="backtestResults" class="backtest-results hidden">
+                <!-- Summary Stats -->
+                <div class="summary-section">
+                    <h3>Summary</h3>
+                    <div class="summary-tabs">
+                        <button class="tab-btn active" data-tab="overall">Overall</button>
+                    </div>
+                    <div class="summary-cards">
+                        <div class="summary-card">
+                            <label>Total Profit</label>
+                            <div class="card-value" id="totalProfit">$0.00</div>
+                            <div class="card-percent" id="totalProfitPercent">0%</div>
+                        </div>
+                        <div class="summary-card">
+                            <label>Avg. Profit / Trade</label>
+                            <div class="card-value" id="avgProfit">$0.00</div>
+                            <div class="card-percent" id="avgProfitPercent">0%</div>
+                        </div>
+                        <div class="summary-card">
+                            <label>Win Rate</label>
+                            <div class="card-value" id="winRate">0%</div>
+                            <div class="card-percent" id="totalTrades">0 trades</div>
+                        </div>
+                        <div class="summary-card">
+                            <label>Avg. Holding Period</label>
+                            <div class="card-value" id="avgHoldingPeriod">0 days</div>
+                            <div class="card-percent">-</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card stat-blue">
+                        <label>Total Trade</label>
+                        <div class="stat-value" id="totalTrade">0x</div>
+                    </div>
+                    <div class="stat-card stat-green">
+                        <label>Probability</label>
+                        <div class="stat-value" id="probability">0%</div>
+                    </div>
+                    <div class="stat-card stat-orange">
+                        <label>Avg. Risk : Reward</label>
+                        <div class="stat-value" id="riskReward">0:0</div>
+                    </div>
+                    <div class="stat-card stat-yellow">
+                        <label>Max Drawdown</label>
+                        <div class="stat-value" id="maxDrawdown">0%</div>
+                    </div>
+                </div>
+
+                <!-- Consecutive Profit/Loss -->
+                <div class="consecutive-section">
+                    <div class="consecutive-card consecutive-profit">
+                        <h4>Consecutive Profit</h4>
+                        <div class="consecutive-stats">
+                            <div>
+                                <label>by Trade</label>
+                                <div class="consecutive-value" id="consecutiveProfitTrade">0x</div>
+                            </div>
+                            <div>
+                                <label>by Pips</label>
+                                <div class="consecutive-value" id="consecutiveProfitPips">0 pips</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="consecutive-card consecutive-loss">
+                        <h4>Consecutive Loss</h4>
+                        <div class="consecutive-stats">
+                            <div>
+                                <label>by Trade</label>
+                                <div class="consecutive-value" id="consecutiveLossTrade">0x</div>
+                            </div>
+                            <div>
+                                <label>by Pips</label>
+                                <div class="consecutive-value" id="consecutiveLossPips">0 pips</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGIN MODAL (Optional secure access) -->
+    <div id="loginModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Unlock Backtest</h3>
+            <p>Enter the backtest password to unlock the tool. This works on static hosting like GitHub Pages.</p>
+            <form id="loginForm" class="login-form">
+                <label>
+                    Password
+                    <input type="password" name="password" required>
+                </label>
+                <div class="modal-actions">
+                    <button type="submit" class="primary">Unlock</button>
+                    <button type="button" id="closeModal" class="secondary">Cancel</button>
+                </div>
+            </form>
+            <p class="modal-hint">(Use password: <strong>ChasingTheDreams</strong>)</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Nestcfox</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="backtest-manager.js"></script>
+</body>
+
+</html>
