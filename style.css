@@ -26,15 +26,22 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 50%, #051809 100%);
-    color: var(--muted);
-    line-height: 1.7;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(30,255,115,0.18), transparent 60%),
+    radial-gradient(circle at bottom, rgba(0,200,80,0.12), transparent 65%),
+    linear-gradient(180deg, #000b05, #000);
+  color: #eafff3;
+    .section-card {
+  background: rgba(0, 30, 15, 0.55);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+}
 }
 
 /* NAVBAR */
