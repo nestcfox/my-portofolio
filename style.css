@@ -1508,7 +1508,7 @@ body {
   color: rgba(180, 255, 210, 0.75);
 }
 /* =========================
-   FIX NAVBAR (STABLE STYLE)
+   NAVBAR FINAL (GREEN LIGHT)
 ========================= */
 
 nav {
@@ -1518,14 +1518,43 @@ nav {
   width: 100%;
   z-index: 1000;
 
-  background-color: #000f08; /* warna solid kaya sebelumnya */
-  border-bottom: 1px solid rgba(0, 255, 120, 0.15);
+  background: linear-gradient(
+    180deg,
+    #1eff73,
+    #00c853
+  );
 
-  backdrop-filter: none; /* PENTING */
+  padding: 18px 40px; /* bikin navbar TINGGI */
+  box-shadow: 0 8px 30px rgba(30, 255, 115, 0.35);
 }
+
+/* link navbar */
+nav a {
+  color: #002b14;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  margin-right: 24px;
+}
+
+/* hover */
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* spacing konten */
 body {
-  padding-top: 70px; /* sesuaikan tinggi navbar kamu */
+  padding-top: 90px; /* SESUAI tinggi navbar */
 }
-nav {
-  transition: background-color 0.3s ease;
+
+/* mobile */
+@media (max-width: 768px) {
+  nav {
+    padding: 16px 20px;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin-right: 16px;
+  }
 }
