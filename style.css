@@ -1508,7 +1508,7 @@ body {
   color: rgba(180, 255, 210, 0.75);
 }
 /* =========================
-   NAVBAR FINAL (GREEN LIGHT)
+   NAVBAR FINAL (LIGHT GREEN)
 ========================= */
 
 nav {
@@ -1516,45 +1516,44 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 999;
 
-  background: linear-gradient(
-    180deg,
-    #1eff73,
-    #00c853
-  );
+  /* WARNA HIJAU MUDA */
+  background-color: #3cff8f;
 
-  padding: 18px 40px; /* bikin navbar TINGGI */
-  box-shadow: 0 8px 30px rgba(30, 255, 115, 0.35);
+  /* BIKIN NAVBAR GEDE */
+  padding: 26px 48px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
 }
 
-/* link navbar */
+/* LINK NAVBAR */
 nav a {
-  color: #002b14;
+  color: #00331a; /* TEXT GELAP */
+  font-size: 16px;
   font-weight: 600;
-  font-size: 15px;
   text-decoration: none;
-  margin-right: 24px;
+  margin-right: 28px;
 }
 
-/* hover */
+/* HOVER */
 nav a:hover {
   text-decoration: underline;
 }
 
-/* spacing konten */
+/* BIAR KONTEN GA KETIMPA NAVBAR */
 body {
-  padding-top: 90px; /* SESUAI tinggi navbar */
+  padding-top: 110px; /* SESUAI TINGGI NAVBAR */
 }
 
-/* mobile */
+/* MOBILE */
 @media (max-width: 768px) {
   nav {
-    padding: 16px 20px;
+    padding: 22px 24px;
   }
 
   nav a {
-    font-size: 14px;
-    margin-right: 16px;
+    font-size: 15px;
+    margin-right: 18px;
   }
 }
