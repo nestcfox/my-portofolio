@@ -154,3 +154,6 @@ const sectionObserver = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 sections.forEach(section => sectionObserver.observe(section));
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
