@@ -87,22 +87,36 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="fade-in">
-        <h2>Contact Me</h2>
-        <form
-  id="contact-form"
-  action="https://formspree.io/f/xdabw1za"
-  method="POST"
->
-  <p id="form-status"></p>
+    <section id="contact">
+  <div class="contact-container">
+    <h2>CONTACT ME</h2>
+    <p>Feel free to reach out for collaboration or ideas.</p>
 
-  <input type="text" name="name" required>
-  <input type="email" name="email" required>
-  <textarea name="message" required></textarea>
+    <form
+      action="https://formspree.io/f/xdabwlza"
+      method="POST"
+      class="contact-form"
+    >
+      <label>
+        Your Name
+        <input type="text" name="name" placeholder="Enter your name" required>
+      </label>
 
-  <button type="submit">Send Message</button>
-</form>
-    </section>
+      <label>
+        Email Address
+        <input type="email" name="email" placeholder="Enter your email" required>
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" placeholder="What do you want to say?" required></textarea>
+      </label>
+
+      <button type="submit">Send Message</button>
+      <p id="form-status"></p>
+    </form>
+  </div>
+</section>
 
     <!-- BACKTEST (RESTRICTED) -->
     <section id="backtest" class="fade-in">
