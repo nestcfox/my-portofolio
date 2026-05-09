@@ -1100,3 +1100,10 @@ body {
     padding-top: 60px;
   }
 }
+@media (max-width: 768px) {
+  nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+}
