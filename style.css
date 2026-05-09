@@ -35,9 +35,12 @@ body {
     linear-gradient(180deg, #000b05, #000);
   color: #eafff3;
 }
-section {
-  background: transparent;
-  padding: 100px 20px;
+.section-card {
+  background: rgba(0, 30, 15, 0.55);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
 }
 }
 
