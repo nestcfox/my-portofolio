@@ -1475,3 +1475,28 @@ body {
     font-size: 14px !important;
   }
 }
+/* CONTACT TITLE */
+.contact-container h2 {
+  text-align: center;
+  font-size: 34px;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  color: #2cff7a;
+}
+
+/* Subtitle */
+.contact-container p {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(200, 255, 220, 0.6);
+  margin-bottom: 34px;
+}
+
+/* LABEL */
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: rgba(180, 255, 210, 0.75);
+}
