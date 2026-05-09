@@ -1519,7 +1519,7 @@ nav {
   z-index: 999;
 
   /* WARNA HIJAU MUDA */
-  background-color: #3cff8f;
+  background-color: #7fe3b1;
 
   /* BIKIN NAVBAR GEDE */
   padding: 26px 48px;
@@ -1556,4 +1556,17 @@ body {
     font-size: 15px;
     margin-right: 18px;
   }
+}
+/* FORCE NAVBAR TEXT COLOR */
+nav,
+nav * {
+  color: #00331a !important;
+}
+
+/* OPTIONAL: bikin logo lebih tegas */
+nav .logo,
+nav h1,
+nav a.logo {
+  font-weight: 700;
+  letter-spacing: 1px;
 }
