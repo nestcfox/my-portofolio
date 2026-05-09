@@ -1519,7 +1519,9 @@ nav {
   z-index: 999;
 
   /* WARNA HIJAU MUDA */
-  background: rgba(34, 197, 94, 0.12);
+  background: rgba(0, 30, 15, 0.55);
+  backdrop-filter: blur(10px);
+}
 
   /* BIKIN NAVBAR GEDE */
   padding: 26px 48px;
