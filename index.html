@@ -89,19 +89,16 @@
     <!-- CONTACT -->
     <section id="contact" class="fade-in">
         <h2>Contact Me</h2>
-        <form 
-  class="contact-form"
-  action="https://formspree.io/f/xdabwlza"
+        <form
+  id="contact-form"
+  action="https://formspree.io/f/xdabw1za"
   method="POST"
-  onsubmit="document.getElementById('form-status').innerText='Message sent!'"
 >
-            <p id="form-status"></p>
->
-  <input type="text" name="name" placeholder="Your Name" required>
+  <p id="form-status"></p>
 
-  <input type="email" name="email" placeholder="Your Email" required>
-
-  <textarea name="message" placeholder="Your Message" required></textarea>
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <textarea name="message" required></textarea>
 
   <button type="submit">Send Message</button>
 </form>
