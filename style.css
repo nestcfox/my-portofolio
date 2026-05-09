@@ -42,10 +42,6 @@ body {
   padding: 40px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.6);
 }
-nav {
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(10px);
-}
 }
 
 /* NAVBAR */
@@ -1510,4 +1506,26 @@ body {
   gap: 6px;
   font-size: 13px;
   color: rgba(180, 255, 210, 0.75);
+}
+/* =========================
+   FIX NAVBAR (STABLE STYLE)
+========================= */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background-color: #000f08; /* warna solid kaya sebelumnya */
+  border-bottom: 1px solid rgba(0, 255, 120, 0.15);
+
+  backdrop-filter: none; /* PENTING */
+}
+body {
+  padding-top: 70px; /* sesuaikan tinggi navbar kamu */
+}
+nav {
+  transition: background-color 0.3s ease;
 }
