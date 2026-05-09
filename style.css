@@ -1278,3 +1278,136 @@ body {
     font-size: 14px;
   }
 }
+/* =========================
+   CONTACT SECTION
+========================= */
+
+#contact {
+  min-height: 100vh;
+  padding: 100px 20px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    circle at top,
+    rgba(30, 255, 115, 0.12),
+    rgba(0, 0, 0, 0.95)
+  );
+}
+
+/* Container */
+.contact-container {
+  width: 100%;
+  max-width: 640px;
+  padding: 40px 32px;
+  border-radius: 24px;
+  background: rgba(0, 30, 15, 0.6);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.7),
+    inset 0 0 0 1px rgba(0, 255, 120, 0.15);
+}
+
+/* Title */
+.contact-container h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: #2cff7a;
+}
+
+/* Subtitle (optional) */
+.contact-container p {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(200, 255, 220, 0.6);
+  margin-bottom: 32px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 255, 120, 0.25);
+  background: rgba(0, 0, 0, 0.45);
+  color: #eafff3;
+  font-size: 14px;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+/* Placeholder */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(200, 255, 220, 0.45);
+}
+
+/* Focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2cff7a;
+  box-shadow: 0 0 0 3px rgba(44, 255, 122, 0.2);
+}
+
+/* Textarea */
+.contact-form textarea {
+  min-height: 140px;
+  resize: none;
+}
+
+/* Button */
+.contact-form button {
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #1eff73, #00c853);
+  color: #001a0c;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.contact-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(30, 255, 115, 0.4);
+}
+
+/* Status message */
+#form-status {
+  text-align: center;
+  font-size: 13px;
+  color: #9affc6;
+  margin-top: 6px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 600px) {
+  #contact {
+    padding: 80px 12px 60px;
+  }
+
+  .contact-container {
+    padding: 32px 20px;
+  }
+
+  .contact-container h2 {
+    font-size: 26px;
+  }
+}
