@@ -92,27 +92,11 @@
     <h2>CONTACT ME</h2>
     <p>Feel free to reach out for collaboration or ideas.</p>
 
-    <form
-      action="https://formspree.io/f/xdabwlza"
-      method="POST"
-      class="contact-form"
-    >
-      <label>
-        Your Name
-        <input type="text" name="name" placeholder="Enter your name" required>
-      </label>
-
-      <label>
-        Email Address
-        <input type="email" name="email" placeholder="Enter your email" required>
-      </label>
-
-      <label>
-        Message
-        <textarea name="message" placeholder="What do you want to say?" required></textarea>
-      </label>
-
-      <button type="submit">Send Message</button>
+    <form action="https://formspree.io/f/xdabwlza" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send</button>
       <p id="form-status"></p>
     </form>
   </div>
